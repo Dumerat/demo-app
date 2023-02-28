@@ -6,17 +6,21 @@ import Carrousel from '../Carrousel/Carrousel'
 import Collapse from '../Collapse/Collapse'
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
+import { Navigate } from 'react-router-dom';
 
 export default function Housing(){
     const currentImg = useParams().id;
     const data = Data.filter(item => item.id === currentImg);
-
+    
     const [sliderImage, setSliderImage] = useState([]);
     useEffect(() => { 
         const data = Data.filter(item => item.id === currentImg);
-        setSliderImage(data[0].pictures);
+        if(data[0]){
+            setSliderImage(data[0].pictures);
+        }
     },[currentImg]);
 
+    if(data[0] === undefined) { return <Navigate to="*"/> }
     const hostName = data[0].host.name.split(' ')
 
     const stars = [];
