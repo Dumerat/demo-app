@@ -8,7 +8,7 @@ export default function Gallery() {
         <main className='main-gallery'>
             {Data.map(data => {
                 return (
-                    <Card key={data.id} id={data.id} title={data.title} image={data.cover}/>
+                    <Card key={data.id} props={data}/>
                 )
             })}
         </main>

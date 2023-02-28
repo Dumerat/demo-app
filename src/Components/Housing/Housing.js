@@ -3,6 +3,7 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Data from '../Data/Data'
 import Carrousel from '../Carrousel/Carrousel'
+import Collapse from '../Collapse/Collapse'
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 
@@ -51,6 +52,14 @@ export default function Housing(){
                     <div className='housing-rating'>{stars}</div>
                 </div>
             </main>
+                <div className='collapse-container'>
+                    <div className='collapse-item'>
+                        <Collapse title="Description" content={data[0].description} />
+                    </div>
+                    <div className='collapse-item'>
+                        <Collapse title="Équipements" content={data[0].equipments} />
+                    </div>
+                </div>
             <Footer/>
         </>
     );

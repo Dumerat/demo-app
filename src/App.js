@@ -7,20 +7,16 @@ import "./index.css";
 
 const router = createBrowserRouter([
 	{
-		path: "/",
-		element: <Home />
+		path: "/", element: <Home />
 	},
 	{
-		path: "/housing/:id",
-		element: <Housing />
+		path: "/housing/:id", element: <Housing />
 	},
 	{
-		path: '/about',
-		element: <About />
+		path: '/about', element: <About />
 	},
 	{
-		path: "*",
-		element: <PageNotFound />
+		path: "*", element: <PageNotFound />
 	},
 ]);
 

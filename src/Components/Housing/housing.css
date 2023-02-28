@@ -23,6 +23,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    text-align: end;
 }
 
 .host-img{
@@ -55,6 +56,17 @@
 .housing-tag-container{
     display: flex;
     gap: 10px;
+}
+
+.collapse-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.collapse-item{
+    width: 48%;
 }
 
 @media screen and (max-width: 768px){
@@ -103,5 +115,14 @@
 
     .housing-host{
         order: 1;
+    }
+
+    .collapse-container{
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .collapse-item{
+        width: 100%;
     }
   }
