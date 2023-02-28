@@ -1,0 +1,18 @@
+.main-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+    background-color: #F7F7F7;
+    border-radius: 25px;
+    padding: 40px;
+}
+
+@media screen and (max-width:768px) {
+    .main-gallery{
+        row-gap: 20px;
+        background-color: white;
+        border-radius: 0;
+        padding: 0;
+    }
+}

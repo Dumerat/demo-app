@@ -1,0 +1,39 @@
+.page-not-found{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+            
+.not-found{
+    color: var(--color-red);
+    font-size: 288px
+}
+
+.not-found-infos{
+    color: var(--color-red);
+    font-size: 36px;
+    text-align: center;
+    width: 70%;
+}
+
+.back-not-found{
+    margin-top: clamp(100px, 15%, 200px);
+    color: var(--color-red);
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+@media(max-width: 768px) {
+    .not-found {  
+        font-size: 96px;
+    }
+    .not-found-infos{
+        font-size: 18px;
+    }
+    .back-not-found{
+        font-size: 14px;
+    }
+}
