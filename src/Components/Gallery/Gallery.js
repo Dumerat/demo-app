@@ -6,7 +6,7 @@ export default function Gallery() {
 
     return (
         <main className='main-gallery'>
-            {Data.map(data => {
+            {Data.map(data => { //map pour ajouter toutes les cartes
                 return (
                     <Card key={data.id} props={data}/>
                 )

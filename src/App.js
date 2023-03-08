@@ -1,10 +1,11 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Home from "./Components/Home/Home";
-import About from "./Components/About/About";
-import Housing from "./Components/Housing/Housing";
-import PageNotFound from "./Components/PageNotFound/PageNotFound";
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import Housing from "./Pages/Housing/Housing";
+import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 import "./index.css";
 
+//création des routes
 const router = createBrowserRouter([
 	{
 		path: "/", element: <Home />

@@ -2,11 +2,11 @@ import "./banner.css";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-export default function Banner() {
+export default function Banner() { 
   const [currentPage, setCurrentPage] = useState("home");
   const location = useLocation();
 
-  useEffect(() => {
+  useEffect(() => { //Au changement d'une page
     if (location.pathname === "/") {
       setCurrentPage("home");
     } else if (location.pathname === "/about") {

@@ -1,9 +1,9 @@
 import './housing.css'
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
-import Data from '../Data/Data'
-import Carrousel from '../Carrousel/Carrousel'
-import Collapse from '../Collapse/Collapse'
+import Header from '../../Components/Header/Header'
+import Footer from '../../Components/Footer/Footer'
+import Data from '../../Components/Data/Data'
+import Carrousel from '../../Components/Carrousel/Carrousel'
+import Collapse from '../../Components/Collapse/Collapse'
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import { Navigate } from 'react-router-dom';
@@ -12,6 +12,7 @@ export default function Housing(){
     const currentImg = useParams().id;
     const data = Data.filter(item => item.id === currentImg);
     
+    //insère les images dans le state
     const [sliderImage, setSliderImage] = useState([]);
     useEffect(() => { 
         const data = Data.filter(item => item.id === currentImg);
@@ -23,6 +24,7 @@ export default function Housing(){
     if(data[0] === undefined) { return <Navigate to="*"/> }
     const hostName = data[0].host.name.split(' ')
 
+    //gestion de la note d'une location
     const stars = [];
     for (let i = 1; i <= 5; i++) {
         if (i <= data[0].rating) {

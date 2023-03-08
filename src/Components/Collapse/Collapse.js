@@ -12,10 +12,10 @@ export default function Collapse({title,content}) {
         <>
             <div className="collapse-heading">
                 <p className="menu-title">{title}</p>
-                <img onClick={handleToggle} className={`collapse-toggle ${isOpen ? "collapse-open" : " "}`} src="/images/left-arrow.svg" alt="open/close"></img>
+                <img onClick={handleToggle} className={`collapse-toggle ${isOpen ? "collapse-open" : ""}`} src="/images/left-arrow.svg" alt="open/close"></img>
             </div>
             {isOpen && (
-                Array.isArray(content) ? (
+                Array.isArray(content) ? ( //si le contenu est un tableau l'affichage est géré par ligne
                   <div className="collapse-content">
                     {content.map((item, index) => (
                       <p key={index}>{item}</p>
